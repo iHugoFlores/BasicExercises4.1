@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ViewAController.h"
 
 @interface ViewController ()
 
@@ -19,5 +20,12 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)onButtonPress:(id)sender {
+    ViewAController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"viewA"];
+    
+    vc.passText = @"Hello World";
+    
+    [self presentViewController:vc animated:true completion:nil];
+}
 
 @end

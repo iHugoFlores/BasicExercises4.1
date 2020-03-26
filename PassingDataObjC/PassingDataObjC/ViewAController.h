@@ -10,8 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewAController : UIView
-
+@interface ViewAController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *dataField;
+@property NSString *passText;
 @end
 
 NS_ASSUME_NONNULL_END
